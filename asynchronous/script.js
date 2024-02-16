@@ -85,30 +85,177 @@
     
 
 
- const parchi =    new Promise(function(resolve,rejected){
-    fetch('https://randomuser.me/api/')
-    .then(raw=>raw.json())
-    .then(result=>{
+//  const parchi =    new Promise(function(resolve,rejected){
+//     fetch('https://randomuser.me/api/')
+//     .then(raw=>raw.json())
+//     .then(result=>{
 
-        if(result.results[0].gender=="male") resolve();
-        else rejected();
+//         if(result.results[0].gender=="male") resolve();
+//         else rejected();
 
-    });
-
-
+//     });
 
 
 
 
 
-});
-parchi.then(function(){
-    console.log("harabutton");
-})
-.catch(function(){
-    console.log("red button");
-})
 
+
+// });
+// parchi.then(function(){
+//     console.log("harabutton");
+// })
+// .catch(function(){
+//     console.log("red button");
+// })
+
+// call back hell callback ek function hain jo bas isme thoda special ise pass kiya jata hain as an argument 
+//Jab particular function chll jata hain then function ki output ke liye callback krna padta hain
+
+
+// var getData=((url,callback)=>{
+//     fetch(url)
+//     .then(raw=>raw.json())
+//     .then(result=>{
+//     callback(result)
+
+//     })
+
+// })
+// getData("https://randomuser.me/api/",(result)=>{
+//     console.log(result.results[0].name.first,
+//         result.results[0].email,result.results[0].gender);
+// })
+
+
+
+//async await mtlb koi bhi function bana lo lekin asyns me jo line bad me likhte hain wo phala chalte hain
+// kyoki jo code hain jo side stack par depend karta hain asyn await isko change kaar deta we use asyns code as like a sync code
+//
+
+// var async, a = async () => {
+//     let response = await fetch("https://randomuser.me/api/");
+//     let data = await response.json();
+//     console.log(data); // assuming you want to log the data received
+// };
+
+
+// a(); 
+
+//event loop
+
+
+
+//CALLBACK VS PROMISSES VS ASYNC/AWAIT
+
+// EK URL SE DATA LAO OR CONSOLE PAR SHOW KARO
+
+// 
+
+
+// var datafetch=((url,callback)=>{
+//     fetch(url)
+//     .then(raw=>raw.json())
+//     .then(result=>{
+//         callback(result);
+//     })
+
+// })  
+
+// datafetch("https://randomuser.me/api/",(result)=>{
+//     console.log(result);
+
+// })
+
+
+// now try to do this help of the prommisses
+
+// var fetcher =((url)=>{
+//     const parchi=new Promise((resolve, reject) => {
+//         fetch(url)
+//         .then(raw=>raw.json())
+//         .then(result=>{
+//             resolve(result);
+
+//         })
+        
+//     })
+
+// return parchi;
+
+//     })
+//     fetcher("https://randomuser.me/api/")
+//     .then((result)=>{
+//         console.log(result);
+//     });
+
+
+
+
+
+
+
+// NOW DO THIS BY HELP OF THE ASYNC AWAIT
+// const asyncFetch = async (url) => {
+//     let data = await fetch(url);
+//     let result = await data.json();
+//     return result;
+//   };
+  
+//   var asyncf2 = async () => {
+   
+//       let result = await asyncFetch("https://randomuser.me/api/");
+//       console.log(result);
+    
+//   };
+  
+//   asyncf2();
+  
+// GENERATORS ARE USED TO CHANGE THE FLOW OF THE CODE AND ALSO PAUSE THE EXEXUTION OF THE CODE
+function* printnumber(){
+    console.log("started");
+    yield 1;
+    console.log("1st chala")
+    yield 2;
+    console.log("2nd chala");
+    yield 3;
+    console.log("3rd chala")
+
+
+}
+const ans =printnumber();
+console.log(ans.next().value);
+console.log(ans.next().value);
+console.log(ans.next().value);
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+///
+///
+///
+/////
+///
+//
+//
+//
+
+
+//
+////
+//
+
+///
 
 
 
