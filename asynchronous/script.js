@@ -212,48 +212,213 @@
 //   asyncf2();
   
 // GENERATORS ARE USED TO CHANGE THE FLOW OF THE CODE AND ALSO PAUSE THE EXEXUTION OF THE CODE
-function* printnumber(){
-    console.log("started");
-    yield 1;
-    console.log("1st chala")
-    yield 2;
-    console.log("2nd chala");
-    yield 3;
-    console.log("3rd chala")
+// function* printnumber(){
+//     console.log("started");
+//     yield 1;
+//     console.log("1st chala")
+//     yield 2;
+//     console.log("2nd chala");
+//     yield 3;
+//     console.log("3rd chala")
 
+
+// }
+// const ans =printnumber();
+// console.log(ans.next().value);
+// console.log(ans.next().value);
+// console.log(ans.next().value);
+
+
+
+
+
+//
+//
+// things to  know before the react js 
+// arrays,oobjects import and export
+//map,filter,rteduce also we need to learn about the arrow fnc,which is the most imoprrtant among them
+
+//arrays are dyanmic in nature in js
+//array is a data structure which contain more than one type of the element
+//[1,"kunal",function(){},etch ]
+//
+
+
+// var arr =[1,2,3,4]
+// var b =arr.pop();
+// console.log(b);
+//  raarct js me me ek state hota jo mutable nhi hota hain mtlb vo not changable hota hain directly  
+
+
+
+//know we learn how to  change state;
+
+
+// var state=[1,2,3,4];
+// state=[1,2,3];
+
+
+
+// var state =[1,2,3];
+// var copy =[...state];
+// copy.pop();
+
+
+// var state ={
+//   name:"harsh",age:24
+// }
+// var copy={...state};
+// copy.name="harshita";
+
+
+// state=copy;
+
+//destructring used to whren we want to acees obj then
+
+
+
+
+// var obj ={
+//   name:"kunal",age:20
+// }
+
+// const {age}=obj; 
+// age;
+
+// example secon to try
+
+
+// var arr =[12,function(){}];
+// var[first,sec]=arr;
+// first;
+// sec;
+
+
+
+//
+//  import and export in react ,there are comoponents in site in our langauage we called it hisa and har components ko alag  alag components ko bind karna padta hain taki ek website ban sake
+
+var cartexport =()=>{
+  console.log("hello i am exported");
 
 }
-const ans =printnumber();
-console.log(ans.next().value);
-console.log(ans.next().value);
-console.log(ans.next().value);
+
+//for multiple improt and expoert at a time we uses export function with before each
+// function nameexporting it
+
+
+//export default cart; for single 
+////import ,import from cart and then file name/
+//import more than one file at a time imprt{f1,f2} from file name;
+
+
+// arrow function ,function ka bada bhai hota hain
+
+// var b =()=>{
+//   console.log("hii panwar");
+// }
+// b();
+// var b =(val)=>{
+//   console.log(val);
+// }
+// b(12);
+// var b =val=>{
+//   console.log(val);
+// }
+// b(12);
+
+//fat arrow function;
 
 
 
+// var b =()=>{
+//   console.log("hii panwar");
+// }
+// b();
+// var b =()=>{
+//   console.log("hii panwar");
+// }
+// b();
+
+/// let take one or more example 
+// const abc=()=>"kunal";
+
+// console.log(abc()+"panwar");
+//answer of this is kunalpanwar;
+// what if we use the brackets{}then return is compulsary for it
+//  let abc =()=>{
+//   return "kunal";
+//  }
+// console.log(abc()+"panwar");
 
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-///
-///
-///
-/////
-///
-//
-//
-//
+
+///  now try with objects
+//  const abc =()=>{
+//   name:"kunal";
+
+//  }; console.log(abc());
+
+//dont show anything bcs it treated {} as the body of the function not the object now what to do a question arise
+// const abc =()=>({
+//   name:"kunal"
+
+//  });
+//   console.log(abc());
+  
+ 
+
+/// now we discuss about map filter map filter basically bap hota hain jo dono array par chlta hain dono ka kaam ka arraya pr kuch kam karna or ek new array return karta
+
+// bole to map,filter new array generates karte hain without chnaging the parrent of that data
+//   var arr=[1,2,4,5];
+
+//  const arr1= arr.map(val=>val*2);
+//  console.log(arr);
+// console.log(arr1);
+
+/// map ke ander return karna compulsary hota hain
+///agar return nhi  kiya to new array genrate nhi hoga
 
 
+// practise some question on the map filter ;
+// ek array hain jisme jitne bhi number 5 se bade h unme jod do and bakki to exactly return kar do
+
 //
+//  var state =[1,2,3,4,5,6,8,9,10];
+//  const arr =state.map(elem=>elem>5 ? elem+5 :elem);
+//  console.log(arr);
+
+
+// map me jitne elemes ya nuber utne hi return karta but in in filtr we can reduce the number the of the total no of  the element
+// var arr =[1,2,3,4,5,6,7,9,10];
+// const ans =arr.filter(elem=>elem>4);
+// console.log(ans);
+
+  
+
+// example no 2
+
+// var arr =[
+  
+//     {name:"kunal",gender:"male"},
+//     {name:"harsh",gender:"male"},
+//     {name:"ishu",gender:"female"}
+  
+// ]
+//  const ans =arr.filter(elem=>elem.gender==="male");
+//  console.log(ans);
+ 
 ////
-//
+var arr =[
+  {product:"iphone",price:"1200000"},
+  {product:"ipad",price:"70000"},
+  {product:"samsung",price:"30000"},
+  {product:"magee",price:"12"}
+]
+
+const ans =arr.filter(elem=>elem.price<20);
+console.log(ans);//
 
 ///
 
